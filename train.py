@@ -12,7 +12,7 @@ MODEL_PATH = os.path.join("output", "model_wt.pth")
 
 # data generator function
 def next_batch(inputs, targets, batchSize):
-    # loop over the dataset
+	# loop over the dataset
 	for i in range(0, inputs.shape[0], batchSize):
 
 		# yield a tuple of the current batched data and labels
@@ -87,8 +87,8 @@ for epoch in range(0, EPOCHS):
 	print(trainTemplate.format(epoch + 1, (trainLoss / samples),
 		(trainAcc / samples)))
 
-    # initialize tracker variables for testing, then set our model to
-	# evaluation mode
+    # initialize tracker variables for testing
+	# set our model to evaluation mode
 	testLoss = 0
 	testAcc = 0
 	samples = 0
