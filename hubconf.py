@@ -10,7 +10,9 @@ def custom_model():
 	Loads weights from path and
 	returns the model
 	"""
-	# TODO: write comments here @dev
+	# initialize the model
+	# load weights from path
+	# returns model
 	model = mlp.get_training_model()
 	model.load_state_dict(torch.load("model_wt.pth"))
 	return model
